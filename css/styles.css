@@ -1,0 +1,209 @@
+.loading {
+	position: absolute;
+	left: 45%;
+	top: 45%;
+}
+
+.bee-app {
+	font-family: Tahoma;
+	font-size: 12px;
+	padding: 20px 15px;
+}
+
+	.bee-app input {
+		outline: 0;
+	}
+
+	.bee-app input[type=text],
+	.bee-app input[type=text]:active,
+	.bee-app input[type=text]:focus {
+		border-radius: 4px;
+		height: 20px;
+		background: #fffffb;
+	}
+
+	input[type=text]:-webkit-autofill,
+	input[type=text]:-webkit-autofill:hover,
+	input[type=text]:-webkit-autofill:focus,
+	input[type=text]:-webkit-autofill:active {
+	    transition: background-color 5000s ease-in-out 0s;
+	}
+
+	.bee-app input[type=text] + input[type=submit],
+	.bee-app label + input[type=text]{
+		margin-left: 10px;
+	}
+
+	.bee-app input[type=submit] {
+		border-radius: 4px;
+	}
+
+	.bee-app input[type=submit] {
+		outline: 0;
+
+		border: 1px solid #d6d6d6;
+		box-shadow:  0px 1px 0px 0px #d6d6d6;
+		border-radius: 5px;
+		/*display: block;*/
+		font-size: 12px;
+		height: 26px;
+		cursor: pointer;
+
+		background: -webkit-linear-gradient(top, rgb(253, 253, 253) 0%, rgb(220, 220, 220) 100%);
+		background: -o-linear-gradient(top, rgb(253, 253, 253) 0%, rgb(220, 220, 220) 100%);
+		background: -ms-linear-gradient(top, rgb(253, 253, 253) 0%, rgb(220, 220, 220) 100%);
+		background: -moz-linear-gradient(top, rgb(253, 253, 253) 0%, rgb(220, 220, 220) 100%);
+		background: linear-gradient(to bottom, rgb(253, 253, 253) 0%, rgb(220, 220, 220) 100%);
+	}
+
+	.bee-app input[type=submit]:active {
+		background: -webkit-linear-gradient(bottom, rgb(253, 253, 253) 0%, rgb(220, 220, 220) 100%);
+		background: -o-linear-gradient(bottom, rgb(253, 253, 253) 0%, rgb(220, 220, 220) 100%);
+		background: -ms-linear-gradient(bottom, rgb(253, 253, 253) 0%, rgb(220, 220, 220) 100%);
+		background: -moz-linear-gradient(bottom, rgb(253, 253, 253) 0%, rgb(220, 220, 220) 100%);
+		background: linear-gradient(to top, rgb(253, 253, 253) 0%, rgb(220, 220, 220) 100%);
+	}
+
+	.bee-app input[type=submit]:focus {
+		border: 0px solid;
+	}
+
+	.bee-app input[type=submit]:disabled {
+		height: 28px;
+	    color: #9c9c9c;
+	    font-size: 12px;
+	    cursor: pointer;
+	    border: 1px solid #9c9c9c;
+	    border-radius: 4px;
+	    background: #fff;
+	    -webkit-box-shadow: 0px 1px 0px 0px #fff;
+	    -moz-box-shadow: 0px 1px 0px 0px #fff;
+	    box-shadow: 0px 1px 0px 0px #fff;
+	}
+	
+
+.bees {
+	width: 500px;
+	border-collapse: collapse;
+	/*margin-left: 25px;*/
+}
+
+.bees caption,
+.current-track-caption {
+	border: 1px solid #c8c8c7;
+	padding: 10px 5px;
+	width: 90px;
+	background: #ebe8e1;
+}
+
+	.bees tr:nth-child(odd) {
+		background: #d5d5cd;
+	}
+
+	.bees tr:nth-child(even) {
+		background: #eacc53;
+	}
+
+	.bees tr:nth-child(odd):hover td {
+		background: #f0f0eb;
+	}
+
+	.bees tr:nth-child(even):hover td {
+		background: #f5e4b7;
+	}
+
+		.bees tr td {
+			border-bottom: 1px solid gray;
+			height: 30px;
+			cursor: pointer;
+			text-align: right;
+			padding-right: 10px;
+			vertical-align: middle;
+		}
+
+		.bees tr td:first-child {
+			text-align: left;
+			padding-left: 10px;
+		}
+
+.current-track {
+	border: 1px solid #c8c8c7;
+	width: 400px;
+	height: 200px;
+	
+	background: #ebe8e1;
+	padding: 10px;
+}
+
+.current-track-caption {
+	border-bottom: none;
+}
+
+
+.current-track-wrapper {
+	vertical-align: top;
+	margin-right: 25px;
+}
+
+
+	.current-track img,
+	.current-track .track-desc{
+		display: inline-block;
+		vertical-align: top;
+	}
+
+		.current-track .track-desc {
+			padding-top: 12px;
+			padding-left: 5px;
+		}
+
+	/*	.current-track h3 {
+			padding-bottom: 20px;
+		}*/
+
+		.current-track .track-desc span{
+			display: block;
+
+		}
+
+		.current-track .track-desc span:first-child{
+			
+		}
+
+		.current-track .track-desc span:last-child{
+			/*font-weight: bold;*/
+			font-size: 20px;
+			margin-left: 2px;
+		}
+
+.bee-panel {
+	border: 1px solid #c8c8c7;
+	/*border-radius: 5px;*/
+	width: 300px;
+	padding: 20px 15px;
+	/*margin: 20px 15px;*/
+	background: #ebe8e1;
+}
+
+.bee-block {
+	border: 1px solid #c8c8c7;
+	background: #ebe8e1;
+}
+
+form.bee-panel + span {
+	display: inline-block;
+	border: 1px solid #c8c8c7;
+	padding: 10px 5px;
+	margin-top: 25px;
+	background: #ebe8e1;
+}
+
+.bee-tracks {
+	position: relative;
+	top: 25px;
+	height: 100%;
+}
+
+.bee-tracks > * {
+	display: inline-block;
+}
