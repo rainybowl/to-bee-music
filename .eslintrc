@@ -1,0 +1,7 @@
+{
+	"parser": "babel-eslint",
+  "rules": {
+  },
+  //https://github.com/yannickcr/eslint-plugin-react#user-content-recommended-configuration
+   "extends": ["eslint:recommended", "plugin:react/recommended"] 
+}
