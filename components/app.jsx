@@ -10,7 +10,6 @@ import { Provider } from 'react-redux';
 import store from '../store';
 
 import BeeApp from './bee';
-
 import Settings from './settings';
 import Songs from './songs';
 

@@ -1,11 +1,16 @@
-import Immutable from 'immutable'
+import Immutable from 'immutable';
 
-export default (settings = {user: 'Divine_Trick'}, action) => {
+let initialSettings = {
+	user: 'Divine_Trick'
+};
+
+export default (settings = initialSettings, action) => {
 
   switch(action.type) {
     case 'SET_USER':
-    	console.log(settings)
+    console.log('setting user')
       return {
+    //  	...settings,
       	user: action.payload
       }
     default:

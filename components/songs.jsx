@@ -1,12 +1,10 @@
-import React from 'react'
-import { connect } from 'react-redux'
+import React from 'react';
+import { connect } from 'react-redux';
 
-// import NewTodo from './NewTodo'
-import { getSongs } from '../actions'
-import store from '../store'
+import { getSongs } from '../actions';
+import store from '../store';
 
 const Songs = ({songs, dispatch}) => (
-
   <div>
     songs
   </div>
@@ -18,4 +16,13 @@ function mapStateToProps(songs) {
   }
 }
 
-export default connect(mapStateToProps)(Songs)
+export default connect(mapStateToProps)(Songs);
+
+
+/*
+
+   {state.settings.user !='' &&
+        <span>Now using: {state.settings.user}_s Musiksammlung!</span>
+      }
+
+      */

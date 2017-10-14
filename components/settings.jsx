@@ -1,55 +1,75 @@
-import React,  { Component }  from 'react'
-import { connect } from 'react-redux'
+import React, { Component }  from 'react';
+import { connect } from 'react-redux';
 
-import store from '../store'
-import { getSongs, setUser } from '../actions'
+import store from '../store';
+import { 
+  getSongs, 
+  setUser 
+} from '../actions';
 
-
-
-class Settings extends Component {
-
-    render () {
-
-      return(<div>
-      <form className="bee-panel">
-        <label for="user">User name!!: </label>
-        <input type="text" name="user" id="userInput" />
-        <input type="submit" value="Change" onClick={function(e){
-
-        		e.preventDefault();
-
-        		console.log('state ', state)
-        		
-        		var userName = document.getElementById('userInput').value;
-
-     //    		store.dispatch({
-  			//   type: 'SET_USER',
-  			//   payload: userName
-  			// })
-
-  			store.dispatch(setUser(userName))
-        }} />
-      </form>
-
-   
-    </div>
-)}
-
-}
+import { logger } from '../utils';
 
 function mapStateToProps(state) {
   return {
     state
   }
-}
+};
 
-export default connect(mapStateToProps)(Settings)
+@connect(mapStateToProps)
+class Settings extends Component {
 
 
-/*
+    constructor(props) {
+      super(props);
 
-   {state.settings.user !='' &&
-        <span>Now using: {state.settings.user}_s Musiksammlung!</span>
-      }
+      this.state = {
+        user: ''
+      };
 
-      */
+      this.handleUserNameInput = this.handleUserNameInput.bind(this);
+      this.changeUser = this.changeUser.bind(this);
+    };
+
+    handleUserNameInput(e){
+          console.log('handleUserNameInput ', e.target.value)
+
+          this.setState({
+            user: e.target.value
+          });
+    };
+
+    changeUser() {
+      let { user } = this.state;
+
+        store.dispatch(
+          setUser(user)
+        );
+    };
+
+    render () {
+      return(<form className="bee-panel">
+
+          <label 
+            for="user"
+            >
+            User name: 
+            </label>
+
+          <input 
+            type="text" 
+            name="user"
+            value={this.state.user}
+            onChange={this.handleUserNameInput} 
+           />
+
+          <input 
+            type="button" 
+            value="Change" 
+            onClick={this.changeUser} 
+            />
+
+        </form>
+    )};
+};
+
+export default Settings;

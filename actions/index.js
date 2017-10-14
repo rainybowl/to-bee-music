@@ -1,14 +1,13 @@
-export function getSongs(user){
-  return {
+export const getSongs = user => ({
     type: 'GET_SONGS',
     payload: user
-  }
-}
+});
 
-export function setUser(user){
-  return {
+export const setUser = user => ({
     type: 'SET_USER',
     payload: user
-  }
-}
+});
+
+
+
 
