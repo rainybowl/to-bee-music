@@ -1,37 +1,39 @@
-import React from 'react'
+import React,  { Component }  from 'react'
 import { connect } from 'react-redux'
 
 import store from '../store'
 import { getSongs, setUser } from '../actions'
 
-const Settings = ({state, dispatch}) => (
+class Settings extends Component {
 
-  <div>
-    <form className="bee-panel">
-      <label for="user">User name: </label>
-      <input type="text" name="user" id="userInput" />
-      <input type="submit" value="Change" onClick={function(e){
+    render () {
 
-      		e.preventDefault();
+      return(<div>
+      <form className="bee-panel">
+        <label for="user">User name!!: </label>
+        <input type="text" name="user" id="userInput" />
+        <input type="submit" value="Change" onClick={function(e){
 
-      		console.log('state ', state)
-      		
-      		var userName = document.getElementById('userInput').value;
+        		e.preventDefault();
 
-   //    		store.dispatch({
-			//   type: 'SET_USER',
-			//   payload: userName
-			// })
+        		console.log('state ', state)
+        		
+        		var userName = document.getElementById('userInput').value;
 
-			store.dispatch(setUser(userName))
-      }} />
-    </form>
+     //    		store.dispatch({
+  			//   type: 'SET_USER',
+  			//   payload: userName
+  			// })
 
-    {state.settings.user !='' &&
-      <span>Now using: {state.settings.user}_s Musiksammlung!</span>
-    }
-  </div>
-)
+  			store.dispatch(setUser(userName))
+        }} />
+      </form>
+
+   
+    </div>
+)}
+
+}
 
 function mapStateToProps(state) {
   return {
@@ -40,3 +42,12 @@ function mapStateToProps(state) {
 }
 
 export default connect(mapStateToProps)(Settings)
+
+
+/*
+
+   {state.settings.user !='' &&
+        <span>Now using: {state.settings.user}_s Musiksammlung!</span>
+      }
+
+      */

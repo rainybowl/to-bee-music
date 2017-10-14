@@ -16,11 +16,11 @@ module.exports = {
           presets: ['react', 'es2015']
         }
       },
-      {
+      /*{
         test: /\.js$/,
         exclude: /node_modules/,
         loaders: ['babel-loader', 'eslint-loader']
-      }
+      }*/
     ]
   },
   resolve: {

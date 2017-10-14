@@ -1,14 +1,54 @@
-import React from 'react'
-import { render } from 'react-dom'
-import { Provider } from 'react-redux'
-import store from '../store'
-import BeeApp from './bee'
+import React, { Component } from 'react';
+import {
+  BrowserRouter as Router,
+  Link,
+  Route,
+  Switch,
+} from 'react-router-dom';
+import ReactDOM, { render } from 'react-dom';
+import { Provider } from 'react-redux';
+import store from '../store';
+//import BeeApp from './bee';
+
+import Settings from './settings';
+import Songs from './songs';
 
 
-var ToBeeMusicApp = document.getElementById('bee-app')
-render(
-  <Provider store={store}>
-  	<BeeApp />
-  </Provider>,
-  ToBeeMusicApp
-)
+const ToBeeMusicApp = document.getElementById('bee-app');
+
+	ReactDOM.render(
+
+		<Provider store={store}>
+
+		 <div>
+
+
+		  <Router>
+			  <Switch>
+		        <Route  path="/" component={Settings} />
+		        <Route exact path="/songs" component={Songs} />
+		         <Route render={() => <h1>Page not found</h1>} />
+		       </Switch>
+		  </Router>
+
+
+		</div>
+
+	  </Provider>,
+	  ToBeeMusicApp);
+
+
+
+	/*
+
+
+
+	      <Link to="/">Home</Link>
+      <Link to={{pathname: '/songs'}}>Songs</Link>{' '}
+
+
+
+
+	*/	  
+
+

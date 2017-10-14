@@ -1,19 +1,21 @@
-import React from 'react'
-import { connect } from 'react-redux'
+/*import React from 'react';
+import { connect } from 'react-redux';
 
-import Settings from './settings'
-import Songs from './songs'
+import Settings from './settings';
+import Songs from './songs';
 
-import store from '../store'
+import store from '../store';
 
-/*export default*/ const BeeApp = () => (
+
+export default const BeeApp = () => (
 
 	<div>
-  	<Settings /*data={store.settings}*/ />
-  	<Songs /*data={store.songs} *//>
+  	<Settings  />
+  	<Songs />
   	</div>
 )
 
+*/
 
 // function mapStateToProps(store) {
 //   return {
@@ -24,6 +26,6 @@ import store from '../store'
 // connect(mapStateToProps)(Songs)
 // connect(mapStateToProps)(Settings)
 
-export default BeeApp;
+//export default BeeApp;
 
 //export default BeeApp; //connect(mapStateToProps)(Songs)
