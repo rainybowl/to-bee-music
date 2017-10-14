@@ -1,21 +1,22 @@
-/*import React from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 
-import Settings from './settings';
-import Songs from './songs';
+//import Settings from './settings';
+//import Songs from './songs';
 
 import store from '../store';
 
 
-export default const BeeApp = () => (
-
+const BeeApp = (props) => (
 	<div>
-  	<Settings  />
-  	<Songs />
-  	</div>
+
+		<div>some kind of navbar here </div>
+		{props.children}
+
+	</div>	
 )
 
-*/
+
 
 // function mapStateToProps(store) {
 //   return {
@@ -26,6 +27,18 @@ export default const BeeApp = () => (
 // connect(mapStateToProps)(Songs)
 // connect(mapStateToProps)(Settings)
 
-//export default BeeApp;
+export default BeeApp;
 
 //export default BeeApp; //connect(mapStateToProps)(Songs)
+
+
+/*
+
+
+<div>
+  	<Settings  />
+  	<Songs />
+  	</div>
+
+
+  	*/

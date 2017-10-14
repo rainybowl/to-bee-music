@@ -8,21 +8,17 @@ import {
 import ReactDOM, { render } from 'react-dom';
 import { Provider } from 'react-redux';
 import store from '../store';
-//import BeeApp from './bee';
+
+import BeeApp from './bee';
 
 import Settings from './settings';
 import Songs from './songs';
 
-
 const ToBeeMusicApp = document.getElementById('bee-app');
 
-	ReactDOM.render(
-
-		<Provider store={store}>
-
-		 <div>
-
-
+ReactDOM.render(
+	<Provider store={store}>
+		<BeeApp>
 		  <Router>
 			  <Switch>
 		        <Route  path="/" component={Settings} />
@@ -30,25 +26,8 @@ const ToBeeMusicApp = document.getElementById('bee-app');
 		         <Route render={() => <h1>Page not found</h1>} />
 		       </Switch>
 		  </Router>
-
-
-		</div>
-
-	  </Provider>,
-	  ToBeeMusicApp);
-
-
-
-	/*
-
-
-
-	      <Link to="/">Home</Link>
-      <Link to={{pathname: '/songs'}}>Songs</Link>{' '}
-
-
-
-
-	*/	  
-
+		</BeeApp>
+  </Provider>,
+  ToBeeMusicApp
+ );
 

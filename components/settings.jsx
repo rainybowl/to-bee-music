@@ -4,6 +4,8 @@ import { connect } from 'react-redux'
 import store from '../store'
 import { getSongs, setUser } from '../actions'
 
+
+
 class Settings extends Component {
 
     render () {
