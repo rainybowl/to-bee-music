@@ -7,17 +7,14 @@ import {
   setUser 
 } from '../actions';
 
-import { logger } from '../utils';
+import { logger } from '../utils/index'; //todo
 
-function mapStateToProps(state) {
-  return {
+const mapStateToProps = state => ({
     state
-  }
-};
+  });
 
 @connect(mapStateToProps)
 class Settings extends Component {
-
 
     constructor(props) {
       super(props);
@@ -41,9 +38,18 @@ class Settings extends Component {
     changeUser() {
       let { user } = this.state;
 
-        store.dispatch(
+      console.log( setUser)
+
+      console.log( setUser(user))
+
+      //  store.dispatch(
           setUser(user)
-        );
+       // );
+
+
+  getSongs();
+
+  
     };
 
     render () {

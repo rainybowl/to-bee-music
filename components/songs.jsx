@@ -4,19 +4,18 @@ import { connect } from 'react-redux';
 import { getSongs } from '../actions';
 import store from '../store';
 
+/*
+const mapStateToProps = songs => ({
+    songs
+ });
+
+@connect(mapStateToProps)
+*/
 const Songs = ({songs, dispatch}) => (
   <div>
     songs
   </div>
-)
-
-function mapStateToProps(songs) {
-  return {
-    songs
-  }
-}
-
-export default connect(mapStateToProps)(Songs);
+);
 
 
 /*
